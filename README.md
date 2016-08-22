@@ -1,1 +1,1 @@
-# Blade templating for Bliss framework
+# Blade Templating for Bliss Framework
