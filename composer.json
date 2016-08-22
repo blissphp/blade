@@ -1,0 +1,20 @@
+{
+    "name": "bliss/blade",
+    "description": "Blade templating for Bliss framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yury Plashenkov",
+            "email": "plashenkov@gmail.com"
+        }
+    ],
+    "require": {
+        "philo/laravel-blade": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bliss\\": "src/"
+        }
+    }
+}
