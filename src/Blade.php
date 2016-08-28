@@ -2,23 +2,20 @@
 
 namespace Bliss;
 
-use Bliss\Views\Blade as BladeView;
-
 class Blade extends Plugin
 {
-    protected $serviceName = 'blade';
-
-    public function enable($container, $serviceName = null, $options = [])
+    public function enable($container, $serviceName, $options)
     {
         $serviceName = $serviceName ?: 'blade';
 
         $container[$serviceName] = function ($c) use ($options) {
             $blade = new BladeView($options['viewPaths'], $options['cachePath']);
-            $blade['flash'] = $c->flash;
+
+            $blade['flash'] = $c['flash']; // ???
 
             return $blade;
         };
 
-        $container->response->setView($container->$serviceName);
+        $container['response']->setView($container[$serviceName]);
     }
 }

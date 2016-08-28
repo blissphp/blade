@@ -1,11 +1,11 @@
 <?php
 
-namespace Bliss\Views;
+namespace Bliss;
 
 use Illuminate\Events\Dispatcher;
 use Psr\Http\Message\ResponseInterface;
 
-class Blade implements \ArrayAccess
+class BladeView implements \ArrayAccess
 {
     /**
      * Blade instance
@@ -28,7 +28,7 @@ class Blade implements \ArrayAccess
      * @param string $cachePath
      * @param Illuminate\Events\Dispatcher $events
      */
-    public function __construct($viewPaths = [], $cachePath, Dispatcher $events = null)
+    public function __construct(array $viewPaths, $cachePath, Dispatcher $events = null)
     {
         $this->blade = new \Philo\Blade\Blade($viewPaths, $cachePath, $events);
     }
