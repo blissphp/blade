@@ -1,11 +1,14 @@
 <?php
 
-namespace Bliss;
+namespace Bliss\Blade;
 
+use ArrayAccess;
+use ArrayIterator;
+use Philo\Blade\Blade;
 use Illuminate\Events\Dispatcher;
 use Psr\Http\Message\ResponseInterface;
 
-class BladeView implements \ArrayAccess
+class View implements ArrayAccess
 {
     /**
      * Blade instance
@@ -30,7 +33,7 @@ class BladeView implements \ArrayAccess
      */
     public function __construct(array $viewPaths, $cachePath, Dispatcher $events = null)
     {
-        $this->blade = new \Philo\Blade\Blade($viewPaths, $cachePath, $events);
+        $this->blade = new Blade($viewPaths, $cachePath, $events);
     }
 
     /**
@@ -133,6 +136,6 @@ class BladeView implements \ArrayAccess
      */
     public function getIterator()
     {
-        return new \ArrayIterator($this->defaultVariables);
+        return new ArrayIterator($this->defaultVariables);
     }
 }
