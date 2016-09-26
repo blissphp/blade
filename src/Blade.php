@@ -12,8 +12,7 @@ class Blade extends Plugin
 
         $container['view'] = function ($container) use ($settings) {
             $view = new View($settings['templatePaths'], $settings['cachePath']);
-
-            $view['flash'] = $container['flash']; // ??? TODO
+            $view['container'] = $container;
 
             return $view;
         };
