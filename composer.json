@@ -1,6 +1,6 @@
 {
     "name": "bliss/blade",
-    "description": "Blade templating for Bliss framework",
+    "description": "Blade templating framework-agnostic",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "philo/laravel-blade": "^3.1"
+        "illuminate/view": "~5"
     },
     "autoload": {
         "psr-4": {
