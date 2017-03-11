@@ -1,6 +1,6 @@
 <?php
 
-namespace Bliss\Blade;
+namespace Bliss;
 
 use ArrayAccess;
 use Illuminate\Events\Dispatcher;
