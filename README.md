@@ -29,15 +29,19 @@ echo $blade->render('some-template', [
 ]);
 ```
 
-You can also pass variables in such way (useful for global variables, etc.):
+You can also pass variables like this (useful for setting global Blade variables):
 
 ```php
 $blade['variable3'] = $variable3;
 ```
 
+## Blade Documentation
+
+Blade documentation can be found here: https://laravel.com/docs/5.4/blade
+
 ## Credits
 
-[Yury Plashenkov](https://github.com/plashenkov) (this class)  
+[Yury Plashenkov](https://github.com/plashenkov) (this library)  
 [Taylor Otwell](https://github.com/taylorotwell) (Blade engine)
 
 ## License
