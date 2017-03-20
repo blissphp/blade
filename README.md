@@ -5,9 +5,17 @@ This class makes it easy to use Blade in your non-Laravel projects.
 
 ## Usage
 
+Install it via composer:
+
+```bash
+composer require bliss/blade
+```
+
 Instantiate:
 
 ```php
+require __DIR__ . '/vendor/autoload.php';
+
 $viewsDir = __DIR__ . '/views';
 $cachePath = __DIR__ . '/views_cache';
 
@@ -41,8 +49,8 @@ Blade documentation can be found here: https://laravel.com/docs/5.4/blade
 
 ## Credits
 
-[Yury Plashenkov](https://github.com/plashenkov) (this library)  
-[Taylor Otwell](https://github.com/taylorotwell) (Blade engine)
+[Yury Plashenkov](https://yuryplashenkov.com) (this library)  
+[Taylor Otwell](https://github.com/taylorotwell) (Blade templating engine)
 
 ## License
 

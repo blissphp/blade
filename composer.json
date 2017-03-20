@@ -1,12 +1,13 @@
 {
   "name": "bliss/blade",
-  "description": "Blade templating framework-agnostic",
+  "description": "Use Blade templating engine outside of Laravel",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
       "name": "Yury Plashenkov",
-      "email": "plashenkov@gmail.com"
+      "email": "plashenkov@gmail.com",
+      "homepage": "https://yuryplashenkov.com"
     }
   ],
   "require": {
