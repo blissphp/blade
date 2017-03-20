@@ -1,23 +1,26 @@
 # Use Blade outside of Laravel
 
-Blade is a fantastic template engine fro PHP built into Laravel.
-This class allows to use it outside of Laravel.
+Blade is a fantastic templating engine for PHP from Laravel ecosystem.
+This class makes it easy to use Blade in your non-Laravel projects.
 
 ## Usage
 
 Instantiate:
 
 ```php
-$viewsPath = __DIR__ . '/views';
+$viewsDir = __DIR__ . '/views';
 $cachePath = __DIR__ . '/views_cache';
 
 $blade = new \Bliss\Blade($viewsPath, $cachePath);
 ```
 
-Note that you can tell Blade to use multiple template paths.
-Just pass an array as first parameter for that.
+Note that you can pass an array of directories as a first parameter:
 
-Render template:
+```php
+$blade = new \Bliss\Blade([__DIR__ . '/views', __DIR__ . '/views-dir-2'], $cachePath);
+```
+
+Render a template:
 
 ```php
 echo $blade->render('some-template', [
@@ -34,8 +37,8 @@ $blade['variable3'] = $variable3;
 
 ## Credits
 
-[Yury Plashenkov](https://github.com/plashenkov)  
-Thanks [Taylor Otwell](https://github.com/taylorotwell) for Blade template engine itself.
+[Yury Plashenkov](https://github.com/plashenkov) (this class)  
+[Taylor Otwell](https://github.com/taylorotwell) (Blade engine)
 
 ## License
 
