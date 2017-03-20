@@ -45,7 +45,7 @@ $blade['variable3'] = $variable3;
 
 ## Blade Documentation
 
-Blade documentation can be found here: https://laravel.com/docs/5.4/blade
+Blade documentation can be found here: https://laravel.com/docs/blade
 
 ## Credits
 
