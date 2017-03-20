@@ -1,21 +1,21 @@
 {
-  "name": "bliss/blade",
-  "description": "Use Blade templating engine outside of Laravel",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Yury Plashenkov",
-      "email": "plashenkov@gmail.com",
-      "homepage": "https://yuryplashenkov.com"
+    "name": "bliss/blade",
+    "description": "Use Blade templating engine outside of Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yury Plashenkov",
+            "email": "plashenkov@gmail.com",
+            "homepage": "https://yuryplashenkov.com"
+        }
+    ],
+    "require": {
+        "illuminate/view": "^5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bliss\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "illuminate/view": "^5"
-  },
-  "autoload": {
-    "psr-4": {
-      "Bliss\\": "src/"
-    }
-  }
 }

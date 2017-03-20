@@ -27,22 +27,22 @@ class Blade implements ArrayAccess
     protected $defaultVariables = [];
 
     /**
-     * BladeView constructor.
-     * @param array|string $viewPaths
-     * @param string $cachePath
+     * Create new Blade view.
+     * @param array|string $paths Path(s) to templates directory (directories).
+     * @param string $cachePath Path to cache directory.
      * @param Dispatcher|null $events
      */
-    public function __construct($viewPaths, $cachePath, Dispatcher $events = null)
+    public function __construct($paths, $cachePath, Dispatcher $events = null)
     {
         $files = new Filesystem;
 
         $resolver = new EngineResolver;
 
-        $resolver->register('php', function() {
+        $resolver->register('php', function () {
             return new PhpEngine;
         });
 
-        $resolver->register('blade', function() use ($files, $cachePath) {
+        $resolver->register('blade', function () use ($files, $cachePath) {
             $compiler = new BladeCompiler($files, $cachePath);
 
             return new CompilerEngine($compiler);
@@ -50,15 +50,15 @@ class Blade implements ArrayAccess
 
         $this->viewFactory = new Factory(
             $resolver,
-            new FileViewFinder($files, (array) $viewPaths),
+            new FileViewFinder($files, (array) $paths),
             isset($events) ? $events : new Dispatcher
         );
     }
 
     /**
-     * Render template.
-     * @param string $template Template pathname relative to templates directory
-     * @param array $data Associative array of template variables
+     * Render a template.
+     * @param string $template Template filename.
+     * @param array $data Associative array of template variables.
      * @return string
      */
     public function render($template, $data = [])
@@ -70,7 +70,7 @@ class Blade implements ArrayAccess
 
     /**
      * Does this collection have a given key?
-     * @param string $key The data key
+     * @param string $key
      * @return bool
      */
     public function offsetExists($key)
@@ -79,9 +79,9 @@ class Blade implements ArrayAccess
     }
 
     /**
-     * Get collection item for key.
-     * @param string $key The data key
-     * @return mixed The key's value, or the default value
+     * Get collection item.
+     * @param string $key
+     * @return mixed
      */
     public function offsetGet($key)
     {
@@ -90,8 +90,8 @@ class Blade implements ArrayAccess
 
     /**
      * Set collection item.
-     * @param string $key The data key
-     * @param mixed $value The data value
+     * @param string $key
+     * @param mixed $value
      */
     public function offsetSet($key, $value)
     {
@@ -100,7 +100,7 @@ class Blade implements ArrayAccess
 
     /**
      * Remove item from collection.
-     * @param string $key The data key
+     * @param string $key
      */
     public function offsetUnset($key)
     {

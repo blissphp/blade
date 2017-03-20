@@ -16,7 +16,7 @@ Instantiate:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$viewsDir = __DIR__ . '/views';
+$viewsPath = __DIR__ . '/views';
 $cachePath = __DIR__ . '/views_cache';
 
 $blade = new \Bliss\Blade($viewsPath, $cachePath);
