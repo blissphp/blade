@@ -49,7 +49,7 @@ Blade documentation can be found here: https://laravel.com/docs/blade
 
 ## Credits
 
-[Yury Plashenkov](https://yuryplashenkov.com) (this library)  
+[Yuri Plashenkov](https://plashenkov.com) (this library)  
 [Taylor Otwell](https://github.com/taylorotwell) (Blade templating engine)
 
 ## License
