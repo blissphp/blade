@@ -5,9 +5,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Yury Plashenkov",
+            "name": "Yuri Plashenkov",
             "email": "plashenkov@gmail.com",
-            "homepage": "https://yuryplashenkov.com"
+            "homepage": "https://plashenkov.com"
         }
     ],
     "require": {
